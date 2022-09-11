@@ -22,7 +22,7 @@ class MultiColumnRow extends React.Component {
         <ComponentHeader {...this.props} />
         <div>
           <ComponentLabel {...this.props} />
-          <div className="row">
+          <div className="flex flex-wrap ">
             {childItems.map((x, i) => (
               <div key={`${i}_${x || '_'}`} className={className}>{
                 controls ? controls[i] :

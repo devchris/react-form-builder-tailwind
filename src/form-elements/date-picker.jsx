@@ -91,7 +91,7 @@ class DatePicker extends React.Component {
     const { showTimeSelect, showTimeSelectOnly, showTimeInput } = this.props.data;
     const props = {};
     props.type = 'date';
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
     const readOnly = this.props.data.readOnly || this.props.read_only;
     const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -108,7 +108,7 @@ class DatePicker extends React.Component {
     return (
       <div className={baseClasses} style={{ ...this.props.style }}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <div>
             { readOnly &&
@@ -118,7 +118,7 @@ class DatePicker extends React.Component {
                      readOnly={readOnly}
                      placeholder={this.state.placeholder}
                      value={this.state.value}
-                     className="form-control" />
+                     className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" />
             }
             { iOS && !readOnly &&
               <input type="date"
@@ -128,7 +128,7 @@ class DatePicker extends React.Component {
                      dateFormat="MM/DD/YYYY"
                      placeholder={this.state.placeholder}
                      value={this.state.value}
-                     className = "form-control" />
+                     className = "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" />
             }
             { !iOS && !readOnly &&
               <ReactDatePicker
@@ -137,7 +137,7 @@ class DatePicker extends React.Component {
                 onChange={this.handleChange}
                 selected={this.state.internalValue}
                 todayButton={'Today'}
-                className = "form-control"
+                className = "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
                 isClearable={true}
                 showTimeSelect={showTimeSelect}
                 showTimeSelectOnly={showTimeSelectOnly}

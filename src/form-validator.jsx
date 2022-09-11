@@ -54,7 +54,7 @@ export default class FormValidator extends React.Component {
     return (
       <div>
         { this.state.errors.length > 0 &&
-          <div className="alert alert-danger validation-error">
+          <div className="relative px-3 py-3 mb-4 border rounded bg-red-200 border-red-300 text-red-800 validation-error">
             <div className="clearfix">
               <i className="fas fa-exclamation-triangle float-left"></i>
               <ul className="float-left">
@@ -62,7 +62,7 @@ export default class FormValidator extends React.Component {
               </ul>
             </div>
             <div className="clearfix">
-              <a className="float-right btn btn-default btn-sm btn-danger" onClick={this.dismissModal.bind(this)}><IntlMessages id="dismiss" /></a>
+              <a className="float-right inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default py-1 px-2 leading-tight text-xs  bg-red-600 text-white hover:bg-red-700" onClick={this.dismissModal.bind(this)}><IntlMessages id="dismiss" /></a>
             </div>
           </div>
         }

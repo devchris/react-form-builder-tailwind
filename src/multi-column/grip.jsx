@@ -30,7 +30,7 @@ const gripSource = {
 };
 
 const Grip = ({ connectDragSource }) => connectDragSource(
-  <div className="btn is-isolated" style={style} ><i className="is-isolated fas fa-grip-vertical"></i></div>,
+  <div className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline is-isolated" style={style} ><i className="is-isolated fas fa-grip-vertical"></i></div>,
 );
 
 export default DragSource(

@@ -92,7 +92,7 @@ class TextInput extends React.Component {
   render() {
     const props = {};
     props.type = 'text';
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
     if (this.props.mutable) {
       props.defaultValue = this.props.defaultValue;
@@ -109,7 +109,7 @@ class TextInput extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <input {...props} />
         </div>
@@ -127,7 +127,7 @@ class EmailInput extends React.Component {
   render() {
     const props = {};
     props.type = 'text';
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
     if (this.props.mutable) {
       props.defaultValue = this.props.defaultValue;
@@ -144,7 +144,7 @@ class EmailInput extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <input {...props} />
         </div>
@@ -162,7 +162,7 @@ class PhoneNumber extends React.Component {
   render() {
     const props = {};
     props.type = 'tel';
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
     if (this.props.mutable) {
       props.defaultValue = this.props.defaultValue;
@@ -179,7 +179,7 @@ class PhoneNumber extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <input {...props} />
         </div>
@@ -197,7 +197,7 @@ class NumberInput extends React.Component {
   render() {
     const props = {};
     props.type = 'number';
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
 
     if (this.props.mutable) {
@@ -215,7 +215,7 @@ class NumberInput extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <input {...props} />
         </div>
@@ -232,7 +232,7 @@ class TextArea extends React.Component {
 
   render() {
     const props = {};
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
 
     if (this.props.read_only) {
@@ -250,7 +250,7 @@ class TextArea extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <textarea {...props} />
         </div>
@@ -267,7 +267,7 @@ class Dropdown extends React.Component {
 
   render() {
     const props = {};
-    props.className = 'form-control';
+    props.className = 'block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded';
     props.name = this.props.data.field_name;
 
     if (this.props.mutable) {
@@ -285,7 +285,7 @@ class Dropdown extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <select {...props}>
             {this.props.data.options.map((option) => {
@@ -347,7 +347,7 @@ class Signature extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           {this.props.read_only === true || !!sourceDataURL
             ? (<img src={sourceDataURL} />)
@@ -411,7 +411,7 @@ class Tags extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <Select {...props} />
         </div>
@@ -437,7 +437,7 @@ class Checkboxes extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel className="form-label" {...this.props} />
           {this.props.data.options.map((option) => {
             const this_key = `preview_${option.key}`;
@@ -486,7 +486,7 @@ class RadioButtons extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel className="form-label" {...this.props} />
           {this.props.data.options.map((option) => {
             const this_key = `preview_${option.key}`;
@@ -565,7 +565,7 @@ class Rating extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <StarRating {...props} />
         </div>
@@ -582,7 +582,7 @@ class HyperLink extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <a target="_blank" href={this.props.data.href}>{this.props.data.content}</a>
         </div>
       </div>
@@ -598,7 +598,7 @@ class Download extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <a href={`${this.props.download_path}?id=${this.props.data.file_path}`}>{this.props.data.content}</a>
         </div>
       </div>
@@ -658,7 +658,7 @@ class Camera extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           {this.props.read_only === true &&
           this.props.defaultValue &&
@@ -682,7 +682,7 @@ class Camera extends React.Component {
                   onChange={this.displayImage}
                 />
                 <div className="image-upload-control">
-                  <div className="btn btn-default">
+                  <div className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default">
                     <i className="fas fa-camera"></i> Upload Photo
                   </div>
                   <p>Select an image from your computer or device.</p>
@@ -699,7 +699,7 @@ class Camera extends React.Component {
                   />
                   <br />
                   <div
-                    className="btn btn-image-clear"
+                    className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-image-clear"
                     onClick={this.clearImage}
                   >
                     <i className="fas fa-times"></i> Clear Photo
@@ -776,14 +776,14 @@ class FileUpload extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           {this.props.read_only === true &&
           this.props.defaultValue &&
           this.props.defaultValue.length > 0 ? (
             <div>
               <button
-                className='btn btn-default'
+                className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default'
                 onClick={this.saveFile}
               >
                 <i className='fas fa-download'></i> Download File
@@ -800,7 +800,7 @@ class FileUpload extends React.Component {
                   onChange={this.displayFileUpload}
                 />
                 <div className='image-upload-control'>
-                  <div className='btn btn-default'>
+                  <div className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default'>
                     <i className='fas fa-file'></i> Upload File
                   </div>
                   <p>Select a file from your computer or device.</p>
@@ -827,7 +827,7 @@ class FileUpload extends React.Component {
                   </div>
                   <br />
                   <div
-                    className='btn btn-file-upload-clear'
+                    className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-file-upload-clear'
                     onClick={this.clearFileUpload}
                   >
                     <i className='fas fa-times'></i> Clear File
@@ -900,7 +900,7 @@ class Range extends React.Component {
     return (
       <div style={{ ...this.props.style }} className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <div className="form-group">
+        <div className="mb-4">
           <ComponentLabel {...this.props} />
           <div className="range">
             <div className="clearfix">
